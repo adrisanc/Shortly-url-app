@@ -1,0 +1,561 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@400;700&family=Lato&family=Poppins:wght@100;500;700&display=swap');
+
+/* Normalize */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    
+  }
+
+  /* Variables Root */
+
+  :root{
+      /* Colors */
+    
+      /* Primary */
+      --Button-icons-color: hsl(180, 66%, 49%);
+      --background-dark-blue-color: hsl(257, 27%, 26%);
+
+      /* Secondary */
+      --Error-input: hsl(0, 87%, 67%);
+
+      /* Neutral */
+      --White: hsl(300, 100%, 99%);
+      --Advanced-background:hsl(230, 25%, 95%);
+      --Dark-Gray: hsl(249, 4%, 63%);
+      --Gray: hsl(0, 0%, 75%);
+      --Grayish-Violet: hsl(258, 7%, 63%);
+      --Very-Dark-Blue: hsl(255, 11%, 22%);
+      --Very-Dark-Violet: hsl(260, 8%, 14%);
+      
+
+      /*Font sizes*/
+      --big-title: 2.2em;
+      --medium-title: 1.5em;
+      --small-title: 1.25em;
+      --regular-text: 1em;
+      --small-text:.834em;
+
+  }
+  /* Common Properties */
+  p{
+      color: var(--Dark-Gray);
+  }
+  h1,h2,h3{
+      color: var(--Very-Dark-Violet);
+  }
+
+body {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--Very-Dark-Violet);
+}
+
+/* Header */
+
+/*Nav BAR*/
+header nav {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.2em 1.3em;
+    font-size: var(--small-text);
+    position: relative;
+}
+
+
+div.menu{
+        
+    display: none;
+
+}
+.menu.show{
+    background-color: var(--background-dark-blue-color);
+    width: 90%;
+    height: 383px;
+    border-radius: 10px;
+    padding: 1em;
+    position: absolute;
+    top: 96px;
+    left:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+div.menu ul{
+    list-style:none ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    gap: 1em;
+    width: 100%;
+}
+div.menu ul.services-ul{
+    border-bottom: .5px solid var(--Grayish-Violet);
+    gap: 2.2em;
+}
+
+ul.services-ul li:last-child{
+    margin-bottom: .5em;
+}
+
+ul.access-ul{
+    padding: 2em 1em 2.2em 1em;
+}
+
+div.menu ul li a{
+    color: var(--Very-Dark-Violet);
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--White)
+    
+}
+
+li.sign-up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Button-icons-color);
+    height: 48px;
+    width: 200px;
+    text-align: center;
+    border-radius: 50px;
+}
+/* Ends Nav Bar */
+
+
+/* Container Get Started*/
+div.container-get-started{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .8em;
+}
+
+div.container-get-started .item{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    padding: .5em 0;
+    align-items: center;
+}
+
+div.order{
+    width: 100%;
+    order: -1;
+}
+
+
+
+.item img{
+    object-fit: cover;
+    object-position: 25px 0;
+    width: 100%;
+    height:337px;
+    
+}
+div.item-texts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .2em;
+}
+.container-get-started div.item-texts h1{
+    font-size: var(--big-title);
+    text-align: center;
+}
+
+.container-get-started div.item-texts p{
+    font-size: var(--regular-text);
+    text-align: center;
+    font-weight: 500;
+    width: 90%;
+}
+
+div.btn-get-started{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Button-icons-color);
+    height: 56px;
+    width: 196px;
+    border-radius: 50px;
+    margin-top: 1em;
+    margin-bottom: 8em;
+}
+
+div.btn-get-started a{
+    font-size: 1.15em;
+    color: var(--White);
+    font-weight: 700;
+}
+
+
+/*Ends Container Get started*/
+
+/* Ends Header */
+
+/* Shorten Link Section */
+section.shorten-link{
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.shorten-link div{
+    position:absolute;
+    background-image: url("/images/bg-shorten-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-color: var(--background-dark-blue-color);
+    border-radius: 10px;
+    margin:2em 1em;
+    width: 90%;
+    height: 182px;
+}
+
+.shorten-link div form{
+    display: flex;
+    flex-wrap: wrap;
+    height: inherit;
+    gap: 1.5em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.shorten-link div form input{
+    padding: 1em;
+    width: 90%;
+    height: 48px;
+    border-radius: 5px;
+    border: none;
+
+}
+
+.shorten-link div form input[type="submit"]{
+    background-color: var(--Button-icons-color);   
+    color: var(--White);
+    font-weight: 700;
+    
+}
+
+/* Ends Shorten Link Section */
+
+/* Advanced Section */
+
+/*Title & section container*/
+section.advanced{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--Advanced-background);
+    padding: 1em;
+    gap: 3em;
+}
+
+section.advanced div{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+section.advanced div h2{
+    margin-top: 4.5em;
+    font-size: var(--medium-title);
+    margin-bottom: 1em;
+}
+
+section.advanced div p{
+    font-size: .88em;
+    text-align: center;
+}
+
+
+/*Statics*/
+
+div.container-statics{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+div#cyan-line{
+    position: absolute;
+    z-index: 0;
+    content: "";
+    width: 8px;
+    height: 600px;
+    border-radius: none;
+    background-color: var(--Button-icons-color);
+}
+
+div.item-stacs{
+    position: relative;
+    background-color: var(--White);
+    border-radius: 5px;
+    padding: 1em;
+    margin: 3em .3em;
+    
+}
+
+div.item-stacs div {
+    bottom: 290px;
+    height: 88px;
+    width: 88px;
+    position: absolute;
+    background-color: var(--background-dark-blue-color);
+    border-radius: 50%;
+}
+div.item-stacs div#item-detailed{
+    position: absolute;
+    bottom: 300px;
+}
+div.item-stacs h3{
+    padding-top: 2em;
+   font-size: var(--small-title);
+   margin-bottom:1.25em ;
+    
+}
+
+div.item-stacs p {
+    font-size: var(--small-text);
+    padding: 1em .5em 2.2em .5em;
+    
+}
+/* Ends Advanced Section */
+
+/* Boost Section */
+
+section.boost-section{
+    display: flex;
+    flex-wrap:wrap ;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+section.boost-section{
+    background-image: url("/images/bg-boost-mobile.svg");
+    background-color: var(--background-dark-blue-color);
+    background-repeat: no-repeat;
+    height: 299px;
+}
+
+section.boost-section div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+section.boost-section div h2{
+    color: var(--White);
+    font-size: var(--medium-title);
+    margin-bottom: 1em;
+}
+section.boost-section div.btn-get-started{
+    margin-bottom: 0;
+}
+/* Ends Boost Section */
+
+/* Footer */
+footer{    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--Very-Dark-Violet);
+    gap: 2em;
+    padding: 2.9em 2em;
+}
+
+footer .item-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+
+}
+.item-footer .logo{
+     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+.item-footer ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.item-footer ul li:first-child{
+    margin-bottom: .4em;
+}
+.item-footer ul  li:first-child a{
+    color: var(--White);}
+
+.item-footer ul li a{
+    text-decoration: none;
+    color: var(--Gray);
+}
+
+.social-networks ul {
+    display: flex;
+    flex-direction: row;
+}
+
+div.attribution{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--Gray);
+}
+div.attribution a{
+    color: var(--White);
+    text-decoration: none;
+}
+/* Ends Footer */
+
+
+@media  screen and (min-width: 321px) {
+    /* Burger menu */
+    .menu.show{
+        width: 327px;
+        left:24px;
+    }
+
+    li.sign-up{
+        width: 279px;
+    }
+    
+    /* Container Get started */
+    .item img{
+        object-fit: cover;
+        object-position: 25px 0;
+        width: 375px;
+        height:337px;
+        
+    }
+    /* Advanced Section */
+    div.item-stacs div {
+        bottom: 250px;
+       
+    }
+    div.item-stacs div#item-detailed{
+        
+        bottom: 270px;
+    }
+    
+}
+
+@media screen and (min-width: 376px) {
+
+    /* Burger menu */
+
+    .menu.show{
+        width: 90%;
+        left:5%;
+    }
+     /* Container Get started */
+     .item img{
+        width: 100%;
+               
+    }
+    /* Boost-section */
+    section.boost-section{
+        background-image: url("/images/bg-boost-mobile.svg");
+        background-color: var(--background-dark-blue-color);
+        background-size: 100% auto;
+        height: 299px;
+    }
+}
+@media screen and (min-width: 769px) {
+    /* Header */
+    div.menu{
+        flex-wrap: nowrap;
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+        
+    }
+    div.menu ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 35%;
+        gap: 1em;
+        border-bottom: none;
+    }
+    div.menu ul.access-ul{
+        width: 25%;
+    }
+
+    
+    div.menu ul li a{
+        color: var(--Dark-Gray);
+    }
+    .menu.show{
+        display: none;
+    }
+
+    div.burger{
+        display: none;
+    }
+    li.sign-up{
+       margin-left: 10px;
+        
+    }
+    div.menu ul li.sign-up a{
+        color: var(--White);
+        
+    }
+    
+    /* Ens Header */
+    
+}
+
+@media screen and (min-width: 1024px){
+    /* Header */
+    div.menu{
+        flex-wrap: nowrap;
+        display: flex;
+        width: 85%;
+        justify-content: space-between;
+        
+    }
+    /* Ends Header */
+    
+}
+
+@media screen and (min-width: 1440px){
+    /* Header */
+    div.menu{
+        flex-wrap: nowrap;
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        
+    }
+    /* Ends Header */
+    
+}
