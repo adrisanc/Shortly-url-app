@@ -216,7 +216,7 @@ section.shorten-link{
 
 .shorten-link div{
     position:absolute;
-    background-image: url("/images/bg-shorten-mobile.svg");
+    background-image: url("../images/bg-shorten-mobile.svg");
     background-repeat: no-repeat;
     background-position: right top;
     background-color: var(--background-dark-blue-color);
@@ -354,7 +354,7 @@ section.boost-section{
 }
 
 section.boost-section{
-    background-image: url("/images/bg-boost-mobile.svg");
+    background-image: url("../images/bg-boost-mobile.svg");
     background-color: var(--background-dark-blue-color);
     background-repeat: no-repeat;
     height: 299px;
@@ -482,7 +482,7 @@ div.attribution a{
     }
     /* Boost-section */
     section.boost-section{
-        background-image: url("/images/bg-boost-mobile.svg");
+        background-image: url("../images/bg-boost-mobile.svg");
         background-color: var(--background-dark-blue-color);
         background-size: 100% auto;
         height: 299px;
