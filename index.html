@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <script src="https://your-site-or-cdn.com/fontawesome/v6.1.1/js/all.js" data-auto-a11y="true" ></script>
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./src/css/styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
   
@@ -16,9 +16,9 @@
 
   <header>
     <nav>    
-      <img id="logo-nav" src="./images/logo.svg" alt="">    
+      <img id="logo-nav" src="./src/images/logo.svg" alt="">    
       <div class="burger" id="burger-icon">
-        <img src="./images/burger.svg" alt="">
+        <img src="./src/images/burger.svg" alt="">
       </div>
 
       <div class="menu" id="nav-ul">
@@ -49,21 +49,25 @@
         </div>
       </div>
       <div class=" item order">
-        <img src="./images/illustration-working.svg" alt="">
+        <img src="./src/images/illustration-working.svg" alt="">
       </div>
     </div>      
   </header>
 
-  <section class="shorten-link">
-    <div>
+  <section class="shorten-link" id="shorten">
+    <div >
       <form action="index.html">
-        <input type="text" placeholder="Shorten a link here...">
-        <input type="submit" value="Shorten It!">
+        <input id="input-text" type="text" placeholder="Shorten a link here...">
+        <p class="error">Please add a link</p>
+        <input id ="submit" type="submit" value="Shorten It!">
       </form>
     </div>
-  </section> 
-
+    
+    <div id="back-gray"></div>
+  </section>
+  
     <section class="advanced">
+      <article id="back-gray"></article>
       <div class="advanced-title">
           <h2>Advanced Statistics</h2>
           <p>Track how your links are performing across the web with our 
@@ -74,7 +78,7 @@
           <div class=" item-stacs">
             
             <div>
-                <img src="./images/icon-brand-recognition.svg" alt="">
+                <img src="./src/images/icon-brand-recognition.svg" alt="">
             </div>
             <h3>Brand Recognition</h3>
             <p>Boost your brand recognition with each click. Generic links don’t 
@@ -84,7 +88,7 @@
 
           <div class=" item-stacs">
             <div id="item-detailed"> 
-                <img src="./images/icon-detailed-records.svg" alt="">
+                <img src="./src/images/icon-detailed-records.svg" alt="">
             </div>          
             <h3>Detailed Records</h3>
             <p>Gain insights into who is clicking your links. Knowing when and where 
@@ -93,7 +97,7 @@
 
         <div class=" item-stacs">
           <div>
-              <img src="./images/icon-fully-customizable.svg" alt="">
+              <img src="./src/images/icon-fully-customizable.svg" alt="">
           </div>
           <h3>Fully Customizable</h3>
           <p>Improve brand awareness and content discoverability through customizable 
@@ -115,7 +119,7 @@
     <footer>
       
         <div class="item-footer">
-          <img class="logo" src="./images/logo.svg" alt="">>
+          <img class="logo" src="./src/images/logo.svg" alt="">>
         </div>      
 
       <div class="item-footer">
@@ -148,10 +152,10 @@
 
       <div class="item-footer social-networks">
         <ul>
-          <li><a href="#"><img src="./images/icon-facebook.svg"></a></li>
-          <li><a href="#"><img src="./images/icon-twitter.svg"></a></li>
-          <li><a href="#"><img src="./images/icon-pinterest.svg"></a></li>
-          <li><a href="#"><img src="./images/icon-instagram.svg"></a></li>
+          <li><a href="#"><img src="./src/images/icon-facebook.svg"></a></li>
+          <li><a href="#"><img src="./src/images/icon-twitter.svg"></a></li>
+          <li><a href="#"><img src="./src/images/icon-pinterest.svg"></a></li>
+          <li><a href="#"><img src="./src/images/icon-instagram.svg"></a></li>
         </ul>
       </div>
 
@@ -163,6 +167,6 @@
   
   
 
-  <script src="./js/scripts.js"></script>
+  <script src="./src/js/scripts.js"></script>
 </body>
 </html>
