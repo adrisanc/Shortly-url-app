@@ -838,12 +838,11 @@ div.attribution a{
         font-size: var(--small-title);
     }
     div.btn-get-started{
-        margin-bottom: 2em;
+        margin-bottom: 3.3em;
     }
     .item img{
         height: 481px;
         margin-top: 1.5em;
-        margin-bottom: 8em;
     }
 
     
@@ -880,7 +879,7 @@ div.attribution a{
         padding-bottom: 3em;
     }
     section.advanced div h2{
-        margin-top: 4.6em;
+        margin-top: 114px;
         font-size: var(--big-title);
         letter-spacing: -2.5%;
         margin-bottom: .5em;

@@ -14,8 +14,7 @@ window.onload = () =>{
     const submit = document.getElementById("submit");
     
 
-    //Response API
-    
+    //localstorage    
     const loadStorage = localStorage.getItem("links-list");
     const list = loadStorage ? JSON.parse(loadStorage): [];
 
@@ -44,7 +43,22 @@ window.onload = () =>{
 
         
     }
-   
+    
+    //Show all links in localstorage
+    function showLinks (){
+        if(list.length >0 ){
+            list.forEach((link)=>{
+                const userLink = link.userLink;
+                const apiLink = link.apiLink;
+                addLinkElement(userLink,apiLink)
+            })
+        }
+        
+    }
+
+    showLinks()
+    
+    //send link to API
     submit.addEventListener('click',shortenLink);
 
     
@@ -73,28 +87,18 @@ window.onload = () =>{
             input.classList.add("input-error")
             error.style.display = "block"
 
-        }else{
-
-            // localStorage.setItem("links-list", JSON.stringify(list));
+        }else if(linkValue !== '' && list){
+;
             
             fetch(url_Api, options).then(function(res){
             return res.json();
             }).then(function(data){
-
-            // list.forEach((userLink, apiLink )=>{
-            //     userLink = linkValue;
-            //     apiLink = data.link
-            //     addLinkElement(userLink,apiLink)
-            // })
-            
+                                       
             addLinkElement(linkValue,data.link);// funciona me muestra cada enlace
             
             let linkInfo = {userLink:linkValue, apiLink: data.link};
             list.push(linkInfo);
             
-            console.log(data);
-
-    
             
             
             }).catch(function(err){
