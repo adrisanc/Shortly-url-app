@@ -12,22 +12,24 @@ window.onload = () =>{
     const error = document.querySelector("form p");
     const input = document.getElementById("input-text");
     const submit = document.getElementById("submit");
+    
 
     //Response API
     
     const loadStorage = localStorage.getItem("links-list");
     const list = loadStorage ? JSON.parse(loadStorage): [];
 
-    
-    function addLinkElement (userLink,apiLink) { // funciona no mover
+    //create container api  links
+    function addLinkElement (userLink,apiLink) { 
         const div = document.createElement("div");
         const shortLink = document.createElement("p");
         const longLink = document.createElement("p");
-        const button = document.createElement("button")
-
+        const button = document.createElement("button");
+        
+        div.classList.add("links-list");
         longLink.innerHTML = userLink;
         shortLink.innerHTML = apiLink;
-        button.innerHTML = "copy";
+        button.innerHTML = "Copy";
         div.appendChild(longLink);
         div.appendChild(shortLink);
         div.appendChild(button);        
@@ -36,6 +38,7 @@ window.onload = () =>{
         button.addEventListener('click', ()=>{
             navigator.clipboard.writeText(apiLink).then(()=>{
                 button.innerText = "Copied!"
+                button.classList.add("copied")
             })
         })
 
